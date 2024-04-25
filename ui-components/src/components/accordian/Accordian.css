@@ -1,0 +1,86 @@
+.accordian-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.accordian-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multi-select-btn {
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+
+  border-radius: 2rem;
+
+  color: #ffffff;
+  background-color: #707070;
+}
+
+.accordian {
+  max-width: 35rem;
+  width: 100%;
+
+  padding: 1rem;
+}
+
+.accordian-item {
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+
+  border-radius: 2rem;
+
+  background-color: #707070;
+}
+
+.accordian-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: #ffffff;
+}
+
+.accordian-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.accordian-header .material-icons {
+  align-self: flex-start;
+}
+
+.accordian-content {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+
+  padding: 10px 0;
+
+  color: #ffffff;
+}
+
+.accordian-p::before {
+  content: "";
+  display: inline-block;
+
+  width: 100%;
+  height: 2px;
+
+  margin-bottom: 10px;
+
+  background-color: #ffffff;
+}
