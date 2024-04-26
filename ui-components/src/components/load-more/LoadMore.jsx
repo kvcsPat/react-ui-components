@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Layout from "../../routing/Layout";
 import "./LoadMore.css";
 
 export default function LoadMore() {
@@ -44,7 +45,7 @@ export default function LoadMore() {
   }
 
   return (
-    <div className="load-more-wrapper">
+    <Layout>
       <div className="load-more-container">
         {products && products.length
           ? products.map((item) => (
@@ -72,6 +73,6 @@ export default function LoadMore() {
           </button>
         )}
       </div>
-    </div>
+    </Layout>
   );
 }

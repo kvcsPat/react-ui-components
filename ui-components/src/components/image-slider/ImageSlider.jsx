@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Layout from "../../routing/Layout.jsx";
 import "./ImageSlider.css";
 
 export default function ImageSlider({ url, limit = 5, page = 1 }) {
@@ -47,44 +48,49 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   }
 
   return (
-    <div className="img-slider-wrapper">
-      <div className="img-slider-container">
-        <button className="img-slider-btn arrow-left" onClick={handlePrevious}>
-          <span className="material-icons-round">chevron_left</span>
-        </button>
-        {images && images.length
-          ? images.map((imageItem, index) => (
-              <img
-                key={imageItem.id}
-                alt={imageItem.download_url}
-                src={imageItem.download_url}
-                className={
-                  currentSlide === index
-                    ? "img-slider-current-image"
-                    : "img-slider-current-image hide-current-image"
-                }
-              />
-            ))
-          : null}
-        <button className="img-slider-btn arrow-right" onClick={handleNext}>
-          <span className="material-icons-round">chevron_right</span>
-        </button>
-        <span className="circle-indicator">
+    <Layout>
+      <div className="img-slider-wrapper">
+        <div className="img-slider-container">
+          <button
+            className="img-slider-btn arrow-left"
+            onClick={handlePrevious}
+          >
+            <span className="material-icons-round">chevron_left</span>
+          </button>
           {images && images.length
-            ? images.map((_, index) => (
-                <button
-                  key={index}
+            ? images.map((imageItem, index) => (
+                <img
+                  key={imageItem.id}
+                  alt={imageItem.download_url}
+                  src={imageItem.download_url}
                   className={
                     currentSlide === index
-                      ? "current-indicator"
-                      : "current-indicator inactive-indicator"
+                      ? "img-slider-current-image"
+                      : "img-slider-current-image hide-current-image"
                   }
-                  onClick={() => setCurrentSlide(index)}
-                ></button>
+                />
               ))
             : null}
-        </span>
+          <button className="img-slider-btn arrow-right" onClick={handleNext}>
+            <span className="material-icons-round">chevron_right</span>
+          </button>
+          <span className="circle-indicator">
+            {images && images.length
+              ? images.map((_, index) => (
+                  <button
+                    key={index}
+                    className={
+                      currentSlide === index
+                        ? "current-indicator"
+                        : "current-indicator inactive-indicator"
+                    }
+                    onClick={() => setCurrentSlide(index)}
+                  ></button>
+                ))
+              : null}
+          </span>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }

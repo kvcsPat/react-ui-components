@@ -1,0 +1,42 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  min-height: fit-content;
+}
+
+.component-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  max-width: 90rem;
+  width: 100%;
+
+  gap: 1rem;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.component-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15rem;
+  height: 10rem;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  border: solid 1px var(--border-color);
+  border-radius: 1rem;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}

@@ -15,10 +15,11 @@
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
 
+  border: solid 1px var(--border-color);
   border-radius: 2rem;
 
-  color: #ffffff;
-  background-color: #707070;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .star-rating {
@@ -29,6 +30,12 @@
   font-size: 4rem;
 
   cursor: pointer;
+}
 
-  color: #707070;
+.star-inactive {
+  color: var(--bg-color);
+}
+
+.star-active {
+  color: var(--text-color);
 }

@@ -38,9 +38,11 @@
 
   padding: 1rem;
 
+  border: solid 1px var(--border-color);
   border-radius: 1rem;
 
-  background-color: #707070;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .product-img-container {
@@ -64,6 +66,8 @@
 .load-more-bottom-title {
   font-size: 20px;
   font-weight: 700;
+
+  color: var(--text-color);
 }
 
 .load-more-btn {
@@ -73,8 +77,9 @@
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
 
+  border: solid 1px var(--border-color);
   border-radius: 2rem;
 
-  color: #ffffff;
-  background-color: #707070;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
