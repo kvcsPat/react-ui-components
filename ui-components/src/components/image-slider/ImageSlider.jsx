@@ -18,8 +18,8 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
         setImages(data);
         setLoading(false);
       }
-    } catch (e) {
-      setErrMsg(e.message);
+    } catch (error) {
+      setErrMsg(error.message);
       setLoading(false);
     }
   }
