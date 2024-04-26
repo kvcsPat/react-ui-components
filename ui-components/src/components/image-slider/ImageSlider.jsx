@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout.jsx";
+import NavToHomeBtn from "../nav-to-home/NavToHomeBtn.jsx";
 import "./ImageSlider.css";
 
 export default function ImageSlider({ url, limit = 5, page = 1 }) {
@@ -39,53 +40,60 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (errMsg !== null) {
-    return <div>Error occured! {errMsg}</div>;
-  }
-
   return (
     <Layout>
-      <div className="img-slider-container">
-        <button className="img-slider-btn arrow-left" onClick={handlePrevious}>
-          <span className="material-icons-round">chevron_left</span>
-        </button>
-        {images && images.length
-          ? images.map((imageItem, index) => (
-              <img
-                key={imageItem.id}
-                alt={imageItem.download_url}
-                src={imageItem.download_url}
-                className={
-                  currentSlide === index
-                    ? "img-slider-current-image"
-                    : "img-slider-current-image hide-current-image"
-                }
-              />
-            ))
-          : null}
-        <button className="img-slider-btn arrow-right" onClick={handleNext}>
-          <span className="material-icons-round">chevron_right</span>
-        </button>
-        <span className="circle-indicator">
-          {images && images.length
-            ? images.map((_, index) => (
-                <button
-                  key={index}
-                  className={
-                    currentSlide === index
-                      ? "current-indicator"
-                      : "current-indicator inactive-indicator"
-                  }
-                  onClick={() => setCurrentSlide(index)}
-                ></button>
-              ))
-            : null}
-        </span>
-      </div>
+      {loading ? <h3 className="msg">Loading...</h3> : null}
+      {errMsg !== null ? (
+        <h3 className="msg">Error occured! {errMsg}</h3>
+      ) : null}
+      {images && images.length ? (
+        <>
+          <div className="component-title-container">
+            <NavToHomeBtn />
+            <h2 className="component-title">ImageSlider</h2>
+          </div>
+          <div className="img-slider-container">
+            <button
+              className="img-slider-btn arrow-left"
+              onClick={handlePrevious}
+            >
+              <span className="material-icons-round">chevron_left</span>
+            </button>
+            {images && images.length
+              ? images.map((imageItem, index) => (
+                  <img
+                    key={imageItem.id}
+                    alt={imageItem.download_url}
+                    src={imageItem.download_url}
+                    className={
+                      currentSlide === index
+                        ? "img-slider-current-image"
+                        : "img-slider-current-image hide-current-image"
+                    }
+                  />
+                ))
+              : null}
+            <button className="img-slider-btn arrow-right" onClick={handleNext}>
+              <span className="material-icons-round">chevron_right</span>
+            </button>
+            <span className="circle-indicator">
+              {images && images.length
+                ? images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={
+                        currentSlide === index
+                          ? "current-indicator"
+                          : "current-indicator inactive-indicator"
+                      }
+                      onClick={() => setCurrentSlide(index)}
+                    ></button>
+                  ))
+                : null}
+            </span>
+          </div>
+        </>
+      ) : null}
     </Layout>
   );
 }

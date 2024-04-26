@@ -57,6 +57,40 @@ main {
   justify-content: center;
   align-items: center;
 
-  max-width: 90rem;
+  max-width: 85rem;
   width: 100%;
+}
+
+.component-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 5rem;
+
+  margin-bottom: 3rem;
+}
+
+.component-title {
+  font-size: 30px;
+  font-weight: 700;
+
+  color: var(--text-color);
+
+  padding-left: 1rem;
+}
+
+.msg {
+  position: absolute;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  top: 215px;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: var(--text-color);
 }

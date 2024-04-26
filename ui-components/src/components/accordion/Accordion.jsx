@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../routing/Layout.jsx";
 import data from "./data.js";
+import NavToHomeBtn from "../nav-to-home/NavToHomeBtn.jsx";
 import "./Accordion.css";
 
 export default function Accordion() {
@@ -33,6 +34,10 @@ export default function Accordion() {
 
   return (
     <Layout>
+      <div className="component-title-container">
+        <NavToHomeBtn />
+        <h2 className="component-title">Accordion</h2>
+      </div>
       <div className="accordion-settings">
         <button onClick={handleToggleMultiSelect} className="multi-select-btn">
           {enableMultiSelection ? (

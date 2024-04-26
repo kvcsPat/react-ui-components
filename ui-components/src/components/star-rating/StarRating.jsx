@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../../routing/Layout";
+import NavToHomeBtn from "../nav-to-home/NavToHomeBtn";
 import "./StarRating.css";
 
 export default function StarRating({ numOfStars = 5 }) {
@@ -25,30 +26,32 @@ export default function StarRating({ numOfStars = 5 }) {
 
   return (
     <Layout>
-      <div className="star-rating-container">
-        <button onClick={handleDeleteRating} className="star-rating-btn">
-          Delete Rating
-        </button>
-        <div className="star-rating">
-          {[...Array(numOfStars)].map((_, index) => {
-            index += 1;
-            return (
-              <span
-                key={index}
-                className={
-                  index <= (hover || rating)
-                    ? "material-icons-round star-active"
-                    : "material-icons-round star-inactive"
-                }
-                onClick={() => handleClick(index)}
-                onMouseMove={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-              >
-                {index <= (hover || rating) ? "star" : "star_border"}
-              </span>
-            );
-          })}
-        </div>
+      <div className="component-title-container">
+        <NavToHomeBtn />
+        <h2 className="component-title">StarRating</h2>
+      </div>
+      <button onClick={handleDeleteRating} className="star-rating-btn">
+        Delete Rating
+      </button>
+      <div className="star-rating">
+        {[...Array(numOfStars)].map((_, index) => {
+          index += 1;
+          return (
+            <span
+              key={index}
+              className={
+                index <= (hover || rating)
+                  ? "material-icons-round star-active"
+                  : "material-icons-round star-inactive"
+              }
+              onClick={() => handleClick(index)}
+              onMouseMove={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              {index <= (hover || rating) ? "star" : "star_border"}
+            </span>
+          );
+        })}
       </div>
     </Layout>
   );
