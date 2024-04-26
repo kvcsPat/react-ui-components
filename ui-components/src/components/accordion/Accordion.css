@@ -1,13 +1,3 @@
-.accordion-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-  height: 100vh;
-}
-
 .accordion-settings {
   display: flex;
   justify-content: center;
@@ -26,6 +16,12 @@
 
   color: var(--text-color);
   background-color: var(--bg-color);
+
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .accordion {

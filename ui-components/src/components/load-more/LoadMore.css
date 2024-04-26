@@ -1,23 +1,9 @@
-.load-more-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-
-  width: 100vh;
-  min-height: fit-content;
-
-  margin: 0 auto;
-}
-
 .load-more-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
-  max-width: 90rem;
   width: 100%;
 
   gap: 1rem;

@@ -6,21 +6,19 @@ import "./Home.css";
 export default function Home() {
   return (
     <Layout>
-      <div className="home-wrapper">
-        <div className="component-container">
-          <NavLink to="/accordion" className="component-card">
-            &lt;Accordion/&gt;
-          </NavLink>
-          <NavLink to="/star-rating" className="component-card">
-            &lt;StarRating/&gt;
-          </NavLink>
-          <NavLink to="/image-slider" className="component-card">
-            &lt;ImageSlider/&gt;
-          </NavLink>
-          <NavLink to="/load-more" className="component-card">
-            &lt;LoadMore/&gt;
-          </NavLink>
-        </div>
+      <div className="component-container">
+        <NavLink to="/accordion" className="component-card">
+          &lt;Accordion/&gt;
+        </NavLink>
+        <NavLink to="/star-rating" className="component-card">
+          &lt;StarRating/&gt;
+        </NavLink>
+        <NavLink to="/image-slider" className="component-card">
+          &lt;ImageSlider/&gt;
+        </NavLink>
+        <NavLink to="/load-more" className="component-card">
+          &lt;LoadMore/&gt;
+        </NavLink>
       </div>
     </Layout>
   );

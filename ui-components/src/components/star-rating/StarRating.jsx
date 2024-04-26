@@ -25,7 +25,7 @@ export default function StarRating({ numOfStars = 5 }) {
 
   return (
     <Layout>
-      <div className="star-rating-wrapper">
+      <div className="star-rating-container">
         <button onClick={handleDeleteRating} className="star-rating-btn">
           Delete Rating
         </button>

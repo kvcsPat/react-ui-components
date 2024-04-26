@@ -3,9 +3,44 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 2rem 0 3rem;
+  max-width: 80rem;
+  width: 100%;
+
+  padding: 2rem 1rem 3rem;
 }
 
 .header-title {
   color: var(--text-color);
+}
+
+.theme-btn-border {
+  position: relative;
+
+  cursor: pointer;
+
+  width: 4rem;
+  height: 2rem;
+
+  border: solid 1px var(--border-color);
+  border-radius: 1rem;
+
+  background-color: var(--bg-color);
+}
+
+.theme-btn {
+  position: absolute;
+
+  top: 50%;
+
+  transition: all 1s;
+
+  color: var(--text-color);
+}
+
+.dark {
+  transform: translate(15%, -50%);
+}
+
+.light {
+  transform: translate(135%, -50%);
 }
