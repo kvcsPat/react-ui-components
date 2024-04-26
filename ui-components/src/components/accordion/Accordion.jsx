@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import data from "./data.js";
-import "./Accordian.css";
+import "./Accordion.css";
 
-export default function Accordian() {
+export default function Accordion() {
   const [selected, setSelected] = useState(null);
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiSelect, setMultiSelect] = useState([]);
@@ -31,8 +31,8 @@ export default function Accordian() {
   }
 
   return (
-    <div className="accordian-wrapper">
-      <div className="accordian-settings">
+    <div className="accordion-wrapper">
+      <div className="accordion-settings">
         <button onClick={handleToggleMultiSelect} className="multi-select-btn">
           {enableMultiSelection ? (
             <p className="multi-select-p">Disable Multi Selection</p>
@@ -41,35 +41,35 @@ export default function Accordian() {
           )}
         </button>
       </div>
-      <div className="accordian">
+      <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div key={dataItem.id} className="accordian-item">
+            <div key={dataItem.id} className="accordion-item">
               <div
                 onClick={
                   enableMultiSelection
                     ? () => handleMultieSelection(dataItem.id)
                     : () => handleSingleSelection(dataItem.id)
                 }
-                className="accordian-header"
+                className="accordion-header"
               >
-                <h3 className="accordian-title">{dataItem.question}</h3>
+                <h3 className="accordion-title">{dataItem.question}</h3>
                 {selected === dataItem.id ? (
-                  <span className="material-icons">expand_less</span>
+                  <span className="material-icons-round">expand_less</span>
                 ) : (
-                  <span className="material-icons">expand_more</span>
+                  <span className="material-icons-round">expand_more</span>
                 )}
               </div>
               {selected === dataItem.id ||
               multiSelect.indexOf(dataItem.id) !== -1 ? (
-                <div className="accordian-content">
-                  <p className="accordian-p">{dataItem.answer}</p>
+                <div className="accordion-content">
+                  <p className="accordion-p">{dataItem.answer}</p>
                 </div>
               ) : null}
             </div>
           ))
         ) : (
-          <h3 className="accordian-no-data">No data found!</h3>
+          <h3 className="accordion-no-data">No data found!</h3>
         )}
       </div>
     </div>

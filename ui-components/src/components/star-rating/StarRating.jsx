@@ -34,9 +34,9 @@ export default function StarRating({ numOfStars = 5 }) {
             <span
               key={index}
               className={
-                (index <= (hover || rating) ? "star-active" : "star-inactive") +
-                " " +
-                "material-icons-round"
+                index <= (hover || rating)
+                  ? "material-icons-round star-active"
+                  : "material-icons-round star-inactive"
               }
               onClick={() => handleClick(index)}
               onMouseMove={() => handleMouseEnter(index)}

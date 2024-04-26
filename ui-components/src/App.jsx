@@ -1,13 +1,19 @@
-import Accordian from "./components/accordian/Accordian";
-import StarRating from "./components/star_rating/StarRating";
-import "./styles_global/reset.css";
-import "./styles_global/global.css";
+import Accordion from "./components/accordion/Accordion";
+import StarRating from "./components/star-rating/StarRating";
+import ImageSlider from "./components/image-slider/ImageSlider";
+import "./styles-global/reset.css";
+import "./styles-global/global.css";
 
 function App() {
   return (
     <>
-      {/* <Accordian /> */}
+      <Accordion />
       <StarRating />
+      <ImageSlider
+        url={"https://picsum.photos/v2/list"}
+        page={"1"}
+        limit={"10"}
+      />
     </>
   );
 }
