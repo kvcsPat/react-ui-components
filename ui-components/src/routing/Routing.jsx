@@ -7,6 +7,7 @@ import ImageSlider from "../components/image-slider/ImageSlider";
 import LoadMore from "../components/load-more/LoadMore";
 import ScrollIndicator from "../components/scroll-indicator/ScrollIndicator";
 import TabsParent from "../components/custom-tabs/TabsParent";
+import ModalParent from "../components/modal-popup/ModalParent";
 
 export default function Routing() {
   return (
@@ -33,6 +34,7 @@ export default function Routing() {
           }
         />
         <Route path="/custom-tabs" element={<TabsParent />} />
+        <Route path="/modal-popup" element={<ModalParent />} />
       </Routes>
     </BrowserRouter>
   );

@@ -28,6 +28,9 @@ export default function Home() {
         <NavLink to="/custom-tabs" className="component-card">
           &lt;CustomTabs/&gt;
         </NavLink>
+        <NavLink to="/modal-popup" className="component-card">
+          &lt;ModalPopup/&gt;
+        </NavLink>
       </div>
     </Layout>
   );

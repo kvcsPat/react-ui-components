@@ -4,9 +4,7 @@ import NavToHome from "../structure/nav-to-home/NavToHome";
 import CustomTabs from "./CustomTabs";
 
 function RandomComponent() {
-  return (
-    <p className="random-content">This is the content of RandomComponent.</p>
-  );
+  return <p className="random-content">This is some random content.</p>;
 }
 
 export default function TabsParent() {
