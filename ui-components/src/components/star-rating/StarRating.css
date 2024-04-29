@@ -11,7 +11,7 @@
   color: var(--text-color);
   background-color: var(--bg-color);
 
-  transition: transform 0.5s;
+  transition: all 0.5s;
 
   &:hover {
     transform: scale(1.05);
@@ -30,8 +30,12 @@
 
 .star-inactive {
   color: var(--bg-color);
+
+  transition: all 0.5s;
 }
 
 .star-active {
   color: var(--text-color);
+
+  transition: all 0.5s;
 }

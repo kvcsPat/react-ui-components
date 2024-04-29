@@ -7,7 +7,7 @@ export default function Header({ theme, setTheme }) {
   }
 
   return (
-    <div className="header">
+    <header className="header">
       <h1 className="header-title">UI Components</h1>
       <div className="theme-btn-border" onClick={handleToggleTheme}>
         {theme === "dark" ? (
@@ -18,6 +18,6 @@ export default function Header({ theme, setTheme }) {
           </span>
         )}
       </div>
-    </div>
+    </header>
   );
 }

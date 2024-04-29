@@ -22,6 +22,9 @@ export default function Home() {
         <NavLink to="/load-more" className="component-card">
           &lt;LoadMore/&gt;
         </NavLink>
+        <NavLink to="/scroll-indicator" className="component-card">
+          &lt;ScrollIndicator/&gt;
+        </NavLink>
       </div>
     </Layout>
   );

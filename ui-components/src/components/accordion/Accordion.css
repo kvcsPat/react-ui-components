@@ -17,7 +17,7 @@
   color: var(--text-color);
   background-color: var(--bg-color);
 
-  transition: transform 0.5s;
+  transition: all 0.5s;
 
   &:hover {
     transform: scale(1.05);
@@ -39,6 +39,8 @@
   border-radius: 2rem;
 
   background-color: var(--bg-color);
+
+  transition: all 0.5s;
 }
 
 .accordion-header {
@@ -49,6 +51,8 @@
   cursor: pointer;
 
   color: var(--text-color);
+
+  transition: all 0.5s;
 }
 
 .accordion-title {
@@ -69,6 +73,8 @@
   padding: 10px 0;
 
   color: var(--text-color);
+
+  transition: all 0.5s;
 }
 
 .accordion-p::before {
@@ -81,4 +87,6 @@
   margin-bottom: 10px;
 
   background-color: var(--text-color);
+
+  transition: all 0.5s;
 }
