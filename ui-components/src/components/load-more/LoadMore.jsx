@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
-import NavToHomeBtn from "../nav-to-home/NavToHomeBtn";
+import NavToHome from "../structure/nav-to-home/NavToHome";
 import "./LoadMore.css";
 
 export default function LoadMore() {
@@ -50,10 +50,7 @@ export default function LoadMore() {
       ) : null}
       {products && products.length ? (
         <>
-          <div className="component-title-container">
-            <NavToHomeBtn />
-            <h2 className="component-title">LoadMore</h2>
-          </div>
+          <NavToHome componentTitle={"LoadMore"} />
           <div className="product-container">
             {products && products.length
               ? products.map((item) => (

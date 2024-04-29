@@ -43,28 +43,6 @@ main {
   width: 100%;
 }
 
-.component-title-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  width: 100%;
-  height: 5rem;
-
-  margin-bottom: 3rem;
-}
-
-.component-title {
-  font-size: 30px;
-  font-weight: 700;
-
-  color: var(--text-color);
-
-  padding-left: 1rem;
-
-  transition: all 0.5s;
-}
-
 .msg {
   position: absolute;
 

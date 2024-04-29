@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../../routing/Layout";
-import NavToHomeBtn from "../nav-to-home/NavToHomeBtn";
+import NavToHome from "../structure/nav-to-home/NavToHome";
 import "./StarRating.css";
 
 export default function StarRating({ numOfStars = 5 }) {
@@ -26,10 +26,7 @@ export default function StarRating({ numOfStars = 5 }) {
 
   return (
     <Layout>
-      <div className="component-title-container">
-        <NavToHomeBtn />
-        <h2 className="component-title">StarRating</h2>
-      </div>
+      <NavToHome componentTitle={"StarRating"} />
       <button onClick={handleDeleteRating} className="star-rating-btn">
         Delete Rating
       </button>

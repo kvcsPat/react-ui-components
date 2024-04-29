@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../components/home/Home";
+import Home from "../components/structure/home/Home";
 import Accordion from "../components/accordion/Accordion";
 import StarRating from "../components/star-rating/StarRating";
 import ImageSlider from "../components/image-slider/ImageSlider";
 import LoadMore from "../components/load-more/LoadMore";
 import ScrollIndicator from "../components/scroll-indicator/ScrollIndicator";
+import TabsParent from "../components/custom-tabs/TabsParent";
 
 export default function Routing() {
   return (
@@ -31,6 +32,7 @@ export default function Routing() {
             <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
           }
         />
+        <Route path="/custom-tabs" element={<TabsParent />} />
       </Routes>
     </BrowserRouter>
   );

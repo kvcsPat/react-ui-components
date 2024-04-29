@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Layout from "../../routing/Layout";
+import Layout from "../../../routing/Layout";
 import "./Home.css";
 
 export default function Home() {
@@ -24,6 +24,9 @@ export default function Home() {
         </NavLink>
         <NavLink to="/scroll-indicator" className="component-card">
           &lt;ScrollIndicator/&gt;
+        </NavLink>
+        <NavLink to="/custom-tabs" className="component-card">
+          &lt;CustomTabs/&gt;
         </NavLink>
       </div>
     </Layout>

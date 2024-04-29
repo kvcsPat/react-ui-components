@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout.jsx";
-import NavToHomeBtn from "../nav-to-home/NavToHomeBtn.jsx";
+import NavToHome from "../structure/nav-to-home/NavToHome.jsx";
 import "./ImageSlider.css";
 
 export default function ImageSlider({ url, limit = 5, page = 1 }) {
@@ -48,10 +48,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
       ) : null}
       {images && images.length ? (
         <>
-          <div className="component-title-container">
-            <NavToHomeBtn />
-            <h2 className="component-title">ImageSlider</h2>
-          </div>
+          <NavToHome componentTitle={"ImageSlider"} />
           <div className="img-slider-container">
             <button
               className="img-slider-btn arrow-left"

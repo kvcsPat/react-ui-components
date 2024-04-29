@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
-import NavToHomeBtn from "../nav-to-home/NavToHomeBtn";
+import NavToHome from "../structure/nav-to-home/NavToHome";
 import "./ScrollIndicator.css";
 
 export default function ScrollIndicator({ url }) {
@@ -58,10 +58,7 @@ export default function ScrollIndicator({ url }) {
       ) : null}
       {products && products.length ? (
         <>
-          <div className="component-title-container">
-            <NavToHomeBtn />
-            <h2 className="component-title">ScrollIndicator</h2>
-          </div>
+          <NavToHome componentTitle={"ScrollIndicator"} />
           <div
             className={
               scrollPrecentage > 0
