@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import useFetch from "../../hooks/useFetch";
+import Products from "../re-used/products/Products";
 import "./ScrollIndicator.css";
 
 export default function ScrollIndicator({ baseUrl }) {
@@ -59,22 +60,7 @@ export default function ScrollIndicator({ baseUrl }) {
               ></div>
             </div>
           </div>
-          <div className="product-container">
-            {products && products.length
-              ? products.map((item) => (
-                  <div className="product" key={item.id}>
-                    <div className="product-img-container">
-                      <img
-                        className="product-img"
-                        src={item.thumbnail}
-                        alt={item.title}
-                      />
-                    </div>
-                    <p className="product-p">{item.title}</p>
-                  </div>
-                ))
-              : null}
-          </div>
+          <Products products={products} />
         </>
       ) : null}
     </Layout>

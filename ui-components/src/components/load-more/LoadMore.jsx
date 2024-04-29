@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
+import Products from "../re-used/products/Products";
 import "./LoadMore.css";
 
 export default function LoadMore() {
@@ -51,22 +52,7 @@ export default function LoadMore() {
       {products && products.length ? (
         <>
           <NavToHome componentTitle={"LoadMore"} />
-          <div className="product-container">
-            {products && products.length
-              ? products.map((item) => (
-                  <div className="product" key={item.id}>
-                    <div className="product-img-container">
-                      <img
-                        className="product-img"
-                        src={item.thumbnail}
-                        alt={item.title}
-                      />
-                    </div>
-                    <p className="product-p">{item.title}</p>
-                  </div>
-                ))
-              : null}
-          </div>
+          <Products products={products} />
           <div className="load-more-btn-container">
             {limitReached ? (
               <h3 className="load-more-bottom-title">
