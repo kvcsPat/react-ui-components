@@ -31,6 +31,9 @@ export default function Home() {
         <NavLink to="/modal-popup" className="component-card">
           &lt;ModalPopup/&gt;
         </NavLink>
+        <NavLink to="/click-outside" className="component-card">
+          &lt;ClickOutside/&gt;
+        </NavLink>
       </div>
     </Layout>
   );
