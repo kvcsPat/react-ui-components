@@ -21,7 +21,7 @@ export default function Routing() {
           path="/image-slider"
           element={
             <ImageSlider
-              url={"https://picsum.photos/v2/list"}
+              baseUrl={"https://picsum.photos/v2/list"}
               page={"1"}
               limit={"10"}
             />
@@ -31,7 +31,9 @@ export default function Routing() {
         <Route
           path="/scroll-indicator"
           element={
-            <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+            <ScrollIndicator
+              baseUrl={"https://dummyjson.com/products?limit=100"}
+            />
           }
         />
         <Route path="/custom-tabs" element={<TabsParent />} />

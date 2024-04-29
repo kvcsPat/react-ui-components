@@ -1,36 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Layout from "../../routing/Layout.jsx";
 import NavToHome from "../structure/nav-to-home/NavToHome.jsx";
+import useFetch from "../../hooks/useFetch.js";
 import "./ImageSlider.css";
 
-export default function ImageSlider({ url, limit = 5, page = 1 }) {
-  const [images, setImages] = useState([]);
+export default function ImageSlider({ baseUrl, limit = 5, page = 1 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [errMsg, setErrMsg] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  async function fetchImages(getUrl) {
-    try {
-      setLoading(true);
+  const url = `${baseUrl}?page=${page}&limit=${limit}`;
 
-      const response = await fetch(`${getUrl}?page=${page}&limit=${limit}`);
-      const data = await response.json();
-
-      if (data) {
-        setImages(data);
-        setLoading(false);
-      }
-    } catch (error) {
-      setErrMsg(error.message);
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    if (url !== "") {
-      fetchImages(url);
-    }
-  }, [url]);
+  const {
+    data: images,
+    pending,
+    error,
+  } = useFetch(url, { options: {} }, [url]);
 
   function handlePrevious() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
@@ -42,10 +25,8 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
 
   return (
     <Layout>
-      {loading ? <h3 className="msg">Loading...</h3> : null}
-      {errMsg !== null ? (
-        <h3 className="msg">Error occured! {errMsg}</h3>
-      ) : null}
+      {pending ? <h3 className="msg">Loading...</h3> : null}
+      {error !== null ? <h3 className="msg">Error occured! {error}</h3> : null}
       {images && images.length ? (
         <>
           <NavToHome componentTitle={"ImageSlider"} />

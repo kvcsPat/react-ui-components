@@ -1,35 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
+import useFetch from "../../hooks/useFetch";
 import "./ScrollIndicator.css";
 
-export default function ScrollIndicator({ url }) {
-  const [loading, setLoading] = useState(false);
-  const [errMsg, setErrMsg] = useState(null);
-  const [products, setProducts] = useState([]);
+export default function ScrollIndicator({ baseUrl }) {
   const [scrollPrecentage, setScrollPercentage] = useState(0);
+  const [products, setProducts] = useState([]);
 
-  async function fetchProducts(getUrl) {
-    try {
-      setLoading(true);
-
-      const response = await fetch(url);
-
-      const result = await response.json();
-
-      if (result && result.products && result.products.length > 0) {
-        setProducts(result.products);
-        setLoading(false);
-      }
-    } catch (error) {
-      setErrMsg(error.message);
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    fetchProducts(url);
-  }, [url]);
+  const { data, pending, error } = useFetch(baseUrl, { options: {} }, [
+    baseUrl,
+  ]);
 
   function handleScrollPercentage() {
     const scrollRate =
@@ -43,6 +24,12 @@ export default function ScrollIndicator({ url }) {
   }
 
   useEffect(() => {
+    if (data && data.products && data.products.length > 0) {
+      setProducts(data.products);
+    }
+  }, [data]);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScrollPercentage);
 
     return () => {
@@ -52,10 +39,8 @@ export default function ScrollIndicator({ url }) {
 
   return (
     <Layout>
-      {loading ? <h3 className="msg">Loading...</h3> : null}
-      {errMsg !== null ? (
-        <h3 className="msg">Error occured! {errMsg}</h3>
-      ) : null}
+      {pending ? <h3 className="msg">Loading...</h3> : null}
+      {error !== null ? <h3 className="msg">Error occured! {error}</h3> : null}
       {products && products.length ? (
         <>
           <NavToHome componentTitle={"ScrollIndicator"} />
