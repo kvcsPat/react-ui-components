@@ -53,9 +53,9 @@ export default function LoadMore() {
         <>
           <NavToHome componentTitle={"LoadMore"} />
           <Products products={products} />
-          <div className="load-more-btn-container">
+          <div className="bottom-container">
             {limitReached ? (
-              <h3 className="load-more-bottom-title">
+              <h3 className="bottom-title">
                 You have reached the bottom of this page!
               </h3>
             ) : (

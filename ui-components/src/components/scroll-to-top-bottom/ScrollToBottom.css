@@ -1,4 +1,4 @@
-.load-more-btn {
+.scroll-to-btn {
   font-size: 18px;
   font-weight: 700;
 
@@ -11,7 +11,7 @@
   color: var(--text-color);
   background-color: var(--bg-color);
 
-  transition: transform 0.5s;
+  transition: all 0.5s;
 
   &:hover {
     transform: scale(1.05);

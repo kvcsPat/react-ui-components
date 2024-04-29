@@ -34,6 +34,9 @@ export default function Home() {
         <NavLink to="/click-outside" className="component-card">
           &lt;ClickOutside/&gt;
         </NavLink>
+        <NavLink to="/scroll-to-bottom" className="component-card">
+          &lt;ScrollToBottom/&gt;
+        </NavLink>
       </div>
     </Layout>
   );

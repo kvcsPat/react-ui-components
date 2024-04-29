@@ -9,6 +9,7 @@ import ScrollIndicator from "../components/scroll-indicator/ScrollIndicator";
 import TabsParent from "../components/custom-tabs/TabsParent";
 import ModalParent from "../components/modal-popup/ModalParent";
 import ClickOutside from "../components/click-outside/ClickOutside";
+import ScrollToBottom from "../components/scroll-to-top-bottom/ScrollToBottom";
 
 export default function Routing() {
   return (
@@ -39,6 +40,14 @@ export default function Routing() {
         <Route path="/custom-tabs" element={<TabsParent />} />
         <Route path="/modal-popup" element={<ModalParent />} />
         <Route path="/click-outside" element={<ClickOutside />} />
+        <Route
+          path="/scroll-to-bottom"
+          element={
+            <ScrollToBottom
+              baseUrl={"https://dummyjson.com/products?limit=100"}
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

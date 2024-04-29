@@ -61,6 +61,11 @@ export default function ScrollIndicator({ baseUrl }) {
             </div>
           </div>
           <Products products={products} />
+          <div className="bottom-container">
+            <h3 className="bottom-title">
+              You have reached the bottom of this page!
+            </h3>
+          </div>
         </>
       ) : null}
     </Layout>
