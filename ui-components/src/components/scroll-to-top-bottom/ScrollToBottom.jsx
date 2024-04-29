@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import useFetch from "../../hooks/useFetch";
+import Button from "../re-used/button/Button";
 import Products from "../re-used/products/Products";
-import "./ScrollToBottom.css";
 
 export default function ScrollToBottom({ baseUrl }) {
   const [products, setProducts] = useState([]);
@@ -38,21 +38,16 @@ export default function ScrollToBottom({ baseUrl }) {
       {products && products.length ? (
         <>
           <NavToHome componentTitle={"ScrollToBottom"} />
-          <button className="scroll-to-btn" onClick={handleScrollToBottom}>
-            Scroll To Bottom
-          </button>
+          <Button
+            btnClick={handleScrollToBottom}
+            btnText={"Scroll To Bottom"}
+          />
           <Products products={products} />
           <div className="bottom-container">
-            <h3 className="bottom-title">
+            <h3 ref={bottomRef} className="bottom-title">
               You have reached the bottom of this page!
             </h3>
-            <button
-              className="scroll-to-btn"
-              ref={bottomRef}
-              onClick={handleScrollToTop}
-            >
-              Scroll To Top
-            </button>
+            <Button btnClick={handleScrollToTop} btnText={"Scroll To Top"} />
           </div>
         </>
       ) : null}

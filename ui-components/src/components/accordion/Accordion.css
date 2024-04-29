@@ -4,26 +4,6 @@
   align-items: center;
 }
 
-.multi-select-btn {
-  font-size: 18px;
-  font-weight: 700;
-
-  margin-bottom: 1rem;
-  padding: 1rem 1.5rem;
-
-  border: solid 1px var(--border-color);
-  border-radius: 2rem;
-
-  color: var(--text-color);
-  background-color: var(--bg-color);
-
-  transition: all 0.5s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
 .accordion {
   max-width: 35rem;
   width: 100%;

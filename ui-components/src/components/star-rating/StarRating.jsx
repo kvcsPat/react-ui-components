@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
+import Button from "../re-used/button/Button";
 import "./StarRating.css";
 
 export default function StarRating({ numOfStars = 5 }) {
@@ -27,9 +28,12 @@ export default function StarRating({ numOfStars = 5 }) {
   return (
     <Layout>
       <NavToHome componentTitle={"StarRating"} />
-      <button onClick={handleDeleteRating} className="star-rating-btn">
-        Delete Rating
-      </button>
+      <Button
+        btnDisabled={rating === 0 ? true : false}
+        btnClass={rating === 0 ? "general-btn btn-disabled" : "general-btn"}
+        btnClick={handleDeleteRating}
+        btnText={"Delete Rating"}
+      />
       <div className="star-rating">
         {[...Array(numOfStars)].map((_, index) => {
           index += 1;

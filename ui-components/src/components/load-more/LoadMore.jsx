@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import Products from "../re-used/products/Products";
-import "./LoadMore.css";
+import Button from "../re-used/button/Button";
 
 export default function LoadMore() {
   const [loading, setLoading] = useState(false);
@@ -59,12 +59,10 @@ export default function LoadMore() {
                 You have reached the bottom of this page!
               </h3>
             ) : (
-              <button
-                className="load-more-btn"
-                onClick={() => setCount(count + 1)}
-              >
-                Load More Product
-              </button>
+              <Button
+                btnClick={() => setCount(count + 1)}
+                btnText={"Load More Product"}
+              />
             )}
           </div>
         </>

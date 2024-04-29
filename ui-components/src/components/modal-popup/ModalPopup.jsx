@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../re-used/button/Button";
 import "./ModalPopup.css";
 
 export default function ModalPopup({
@@ -12,9 +13,10 @@ export default function ModalPopup({
     <div id={id || "modal"} className="modal">
       <h3 className="modal-title">{modalTitle ? modalTitle : "Modal Title"}</h3>
       <p className="modal-text">{modalText ? modalText : "Modal Text"}</p>
-      <button className="modal-btn" onClick={handleToggleModal}>
-        {modalBtnText ? modalBtnText : "Modal Button"}
-      </button>
+      <Button
+        btnClick={handleToggleModal}
+        btnText={modalBtnText ? modalBtnText : "Modal Button"}
+      />
     </div>
   );
 }

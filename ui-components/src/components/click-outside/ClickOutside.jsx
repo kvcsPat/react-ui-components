@@ -4,6 +4,7 @@ import NavToHome from "../structure/nav-to-home/NavToHome";
 import { useRef } from "react";
 import useOutsideClick from "../../hooks/useClickOutside";
 import "./ClickOutside.css";
+import Button from "../re-used/button/Button";
 
 export default function ClickOutside() {
   const ref = useRef();
@@ -24,12 +25,10 @@ export default function ClickOutside() {
             </p>
           </div>
         ) : (
-          <button
-            className="show-content-btn"
-            onClick={() => setShowContent(true)}
-          >
-            Show Content
-          </button>
+          <Button
+            btnClick={() => setShowContent(true)}
+            btnText={"Show Content"}
+          />
         )}
       </div>
     </Layout>
