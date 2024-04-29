@@ -1,15 +1,15 @@
 :root {
-  --bg-color: rgba(255, 255, 255, 0.5);
-  --border-color: rgb(66, 38, 121);
-  --text-color: rgb(66, 38, 121);
-  --bg-color-test: #efd3ff;
+  --bg-color: rgba(255, 255, 255, 0.7);
+  --border-color: transparent;
+  --text-color: #555555;
+  --bg-color-main: #e0e0e0;
 }
 
 [data-theme="dark"] {
-  --bg-color: rgba(255, 255, 255, 0.2);
-  --border-color: #ffffff;
-  --text-color: #ffffff;
-  --bg-color-test: #281538;
+  --bg-color: rgba(255, 255, 255, 0.07);
+  --border-color: #909090;
+  --text-color: #909090;
+  --bg-color-main: #181818;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
   margin: 0 auto;
 
-  background-color: var(--bg-color-test);
+  background-color: var(--bg-color-main);
 
   transition: all 0.5s;
 }
