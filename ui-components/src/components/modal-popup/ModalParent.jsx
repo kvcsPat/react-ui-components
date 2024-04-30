@@ -19,7 +19,7 @@ export default function ModalParent() {
   return (
     <Layout>
       <NavToHome componentTitle={"ModalPopup"} />
-      <div className="modal-popup-container">
+      <div className="container">
         <Button
           btnDisabled={showModalPopup}
           btnClass={showModalPopup ? "general-btn btn-disabled" : "general-btn"}

@@ -10,8 +10,17 @@ export default function Home() {
         <h2 className="component-title">Collection</h2>
       </div>
       <div className="component-container">
+        <NavLink to="/search-autocomplete" className="component-card">
+          &lt;SearchAutoComplete/&gt;
+        </NavLink>
+        <NavLink to="/multi-filter" className="component-card">
+          &lt;MultiFilter/&gt;
+        </NavLink>
         <NavLink to="/accordion" className="component-card">
           &lt;Accordion/&gt;
+        </NavLink>
+        <NavLink to="/custom-tabs" className="component-card">
+          &lt;CustomTabs/&gt;
         </NavLink>
         <NavLink to="/star-rating" className="component-card">
           &lt;StarRating/&gt;
@@ -25,23 +34,17 @@ export default function Home() {
         <NavLink to="/scroll-indicator" className="component-card">
           &lt;ScrollIndicator/&gt;
         </NavLink>
-        <NavLink to="/custom-tabs" className="component-card">
-          &lt;CustomTabs/&gt;
+        <NavLink to="/scroll-to-bottom" className="component-card">
+          &lt;ScrollToBottom/&gt;
+        </NavLink>
+        <NavLink to="/scroll-to-section" className="component-card">
+          &lt;ScrollToSection/&gt;
         </NavLink>
         <NavLink to="/modal-popup" className="component-card">
           &lt;ModalPopup/&gt;
         </NavLink>
         <NavLink to="/click-outside" className="component-card">
           &lt;ClickOutside/&gt;
-        </NavLink>
-        <NavLink to="/scroll-to-bottom" className="component-card">
-          &lt;ScrollToBottom/&gt;
-        </NavLink>
-        <NavLink to="/search-autocomplete" className="component-card">
-          &lt;SearchAutoComplete/&gt;
-        </NavLink>
-        <NavLink to="/multi-filter" className="component-card">
-          &lt;MultiFilter/&gt;
         </NavLink>
       </div>
     </Layout>

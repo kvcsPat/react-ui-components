@@ -14,7 +14,7 @@ export default function ClickOutside() {
   return (
     <Layout>
       <NavToHome componentTitle={"ClickOutside"} />
-      <div className="click-outside-container">
+      <div className="container">
         {showContent ? (
           <div ref={ref} className="click-outside-content">
             <h3 className="click-outside-title">

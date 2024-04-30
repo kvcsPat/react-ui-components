@@ -1,9 +1,3 @@
-.tabs-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .tabs-heading {
   display: flex;
   justify-content: space-between;

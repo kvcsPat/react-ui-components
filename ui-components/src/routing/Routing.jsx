@@ -12,6 +12,7 @@ import ClickOutside from "../components/click-outside/ClickOutside";
 import ScrollToBottom from "../components/scroll-to-top-bottom/ScrollToBottom";
 import SearchAutoComplete from "../components/search-autocomplete/SearchAutoComplete";
 import MultiFilter from "../components/multi-filter/MultiFilter";
+import ScrollToSection from "../components/scroll-to-section/ScrollToSection";
 
 export default function Routing() {
   return (
@@ -62,6 +63,7 @@ export default function Routing() {
             <MultiFilter baseUrl={"https://dummyjson.com/products?limit=100"} />
           }
         />
+        <Route path="/scroll-to-section" element={<ScrollToSection />} />
       </Routes>
     </BrowserRouter>
   );

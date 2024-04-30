@@ -68,7 +68,7 @@ export default function SearchAutoComplete({ baseUrl }) {
       {pending ? <h3 className="msg">Loading...</h3> : null}
       {error !== null ? <h3 className="msg">Error occured! {error}</h3> : null}
       <NavToHome componentTitle={"SearchAutoComplete"} />
-      <div className="search-autocomplete-container">
+      <div className="search-autocomplete container">
         <div className="search-container">
           <input
             type="text"

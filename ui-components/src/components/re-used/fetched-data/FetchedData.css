@@ -1,4 +1,4 @@
-.product-container {
+.data-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
   margin-bottom: 2rem;
 }
 
-.product {
+.data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   }
 }
 
-.product-img-container {
+.data-img-container {
   display: flex;
 
   border-radius: 0.6rem;
@@ -49,6 +49,6 @@
   overflow: hidden;
 }
 
-.product-img {
+.data-img {
   width: 100%;
 }

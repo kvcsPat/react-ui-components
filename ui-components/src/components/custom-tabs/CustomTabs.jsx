@@ -10,7 +10,7 @@ export default function CustomTabs({ tabsContent, onChange }) {
   }
 
   return (
-    <div className="tabs-container">
+    <div className="container">
       <div className="tabs-heading">
         {tabsContent.map((tabItem, index) => (
           <div

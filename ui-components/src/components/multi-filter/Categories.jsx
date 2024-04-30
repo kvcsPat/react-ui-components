@@ -12,7 +12,7 @@ export default function Categories({
     setSelectedFilters([]);
   }
   return (
-    <div className="categories-container">
+    <div className="categories container">
       {selectedFilters.length > 0 ? (
         <Button
           btnClass={"general-btn clear-filters"}
@@ -25,7 +25,7 @@ export default function Categories({
           btnClick={handleClearFilters}
         />
       ) : null}
-      <ul className="categories">
+      <ul className="category-list">
         {categories && categories.length
           ? categories.map((category, index) => (
               <li
