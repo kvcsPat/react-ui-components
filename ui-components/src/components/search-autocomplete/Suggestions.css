@@ -1,0 +1,52 @@
+.suggestions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1;
+
+  top: 4.5rem;
+
+  padding: 1rem 1.5rem;
+
+  max-width: 30rem;
+  width: 100%;
+
+  border: solid 1px var(--border-color);
+  border-radius: 2rem;
+
+  color: var(--text-color);
+  background-color: var(--bg-color-main);
+
+  transition: all 0.5s;
+}
+
+.suggestion-item {
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  padding: 1rem 1.5rem;
+
+  border: solid 1px transparent;
+
+  color: var(--text-color);
+
+  list-style: none;
+
+  &:hover {
+    border: solid 1px var(--border-color);
+    border-radius: 2rem;
+    background-color: var(--bg-color);
+  }
+}
+
+.no-suggestions {
+  font-size: 18px;
+  font-weight: 400;
+
+  color: var(--text-color);
+
+  list-style: none;
+}

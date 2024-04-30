@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import useFetch from "../../hooks/useFetch";
-import Products from "../re-used/products/Products";
+import FetchedData from "../re-used/fetched-data/FetchedData";
 import "./ScrollIndicator.css";
 
 export default function ScrollIndicator({ baseUrl }) {
@@ -60,7 +60,7 @@ export default function ScrollIndicator({ baseUrl }) {
               ></div>
             </div>
           </div>
-          <Products products={products} />
+          <FetchedData data={products} />
           <div className="bottom-container">
             <h3 className="bottom-title">
               You have reached the bottom of this page!

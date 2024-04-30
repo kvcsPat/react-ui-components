@@ -10,6 +10,7 @@ import TabsParent from "../components/custom-tabs/TabsParent";
 import ModalParent from "../components/modal-popup/ModalParent";
 import ClickOutside from "../components/click-outside/ClickOutside";
 import ScrollToBottom from "../components/scroll-to-top-bottom/ScrollToBottom";
+import SearchAutoComplete from "../components/search-autocomplete/SearchAutoComplete";
 
 export default function Routing() {
   return (
@@ -46,6 +47,12 @@ export default function Routing() {
             <ScrollToBottom
               baseUrl={"https://dummyjson.com/products?limit=100"}
             />
+          }
+        />
+        <Route
+          path="/search-autocomplete"
+          element={
+            <SearchAutoComplete baseUrl={"https://dummyjson.com/users"} />
           }
         />
       </Routes>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
-import Products from "../re-used/products/Products";
+import FetchedData from "../re-used/fetched-data/FetchedData";
 import Button from "../re-used/button/Button";
 
 export default function LoadMore() {
@@ -52,7 +52,7 @@ export default function LoadMore() {
       {products && products.length ? (
         <>
           <NavToHome componentTitle={"LoadMore"} />
-          <Products products={products} />
+          <FetchedData data={products} />
           <div className="bottom-container">
             {limitReached ? (
               <h3 className="bottom-title">

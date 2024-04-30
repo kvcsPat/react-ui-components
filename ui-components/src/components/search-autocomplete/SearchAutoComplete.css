@@ -1,51 +1,50 @@
-.click-outside-container {
+.search-autocomplete-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  max-width: 85rem;
   width: 100%;
 
   padding: 0 1rem;
 }
 
-.click-outside-content {
+.search-container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
   max-width: 30rem;
   width: 100%;
+}
+
+.search-bar {
+  font-size: 18px;
+  font-weight: 500;
 
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
 
+  width: 100%;
+
   border: solid 1px var(--border-color);
   border-radius: 2rem;
 
+  color: var(--text-color);
   background-color: var(--bg-color);
 
   transition: all 0.5s;
 }
 
-.click-outside-title {
-  text-align: center;
+.search-container .material-icons-round {
+  position: absolute;
 
-  font-size: 30px;
-  font-weight: 700;
+  top: 1rem;
+  right: 1rem;
 
-  color: var(--text-color);
-
-  padding-bottom: 2rem;
-
-  transition: all 0.5s;
-}
-
-.click-outside-text {
-  font-size: 18px;
-  font-weight: 400;
-
-  padding-bottom: 3rem;
+  cursor: pointer;
 
   color: var(--text-color);
-  transition: all 0.5s;
 }

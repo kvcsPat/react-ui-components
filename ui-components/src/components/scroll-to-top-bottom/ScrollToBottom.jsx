@@ -3,7 +3,7 @@ import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import useFetch from "../../hooks/useFetch";
 import Button from "../re-used/button/Button";
-import Products from "../re-used/products/Products";
+import FetchedData from "../re-used/fetched-data/FetchedData";
 
 export default function ScrollToBottom({ baseUrl }) {
   const [products, setProducts] = useState([]);
@@ -42,7 +42,7 @@ export default function ScrollToBottom({ baseUrl }) {
             btnClick={handleScrollToBottom}
             btnText={"Scroll To Bottom"}
           />
-          <Products products={products} />
+          <FetchedData data={products} />
           <div className="bottom-container">
             <h3 ref={bottomRef} className="bottom-title">
               You have reached the bottom of this page!

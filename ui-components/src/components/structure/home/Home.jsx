@@ -37,6 +37,9 @@ export default function Home() {
         <NavLink to="/scroll-to-bottom" className="component-card">
           &lt;ScrollToBottom/&gt;
         </NavLink>
+        <NavLink to="/search-autocomplete" className="component-card">
+          &lt;SearchAutoComplete/&gt;
+        </NavLink>
       </div>
     </Layout>
   );
