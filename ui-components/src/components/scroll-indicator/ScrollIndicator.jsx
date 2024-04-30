@@ -9,9 +9,7 @@ export default function ScrollIndicator({ baseUrl }) {
   const [scrollPrecentage, setScrollPercentage] = useState(0);
   const [products, setProducts] = useState([]);
 
-  const { data, pending, error } = useFetch(baseUrl, { options: {} }, [
-    baseUrl,
-  ]);
+  const { data, pending, error } = useFetch(baseUrl, {});
 
   function handleScrollPercentage() {
     const scrollRate =

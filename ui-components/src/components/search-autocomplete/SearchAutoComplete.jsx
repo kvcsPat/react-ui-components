@@ -13,7 +13,7 @@ export default function SearchAutoComplete({ baseUrl }) {
   const [showDropDown, setShowDropDown] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
 
-  const { data, pending, error } = useFetch(baseUrl, { options: {} });
+  const { data, pending, error } = useFetch(baseUrl, {});
 
   useEffect(() => {
     if (data && data.users && data.users.length > 0) {

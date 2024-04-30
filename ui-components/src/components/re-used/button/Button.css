@@ -1,4 +1,10 @@
 .general-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+
   font-size: 18px;
   font-weight: 700;
 

@@ -9,11 +9,7 @@ export default function ImageSlider({ baseUrl, limit = 5, page = 1 }) {
 
   const url = `${baseUrl}?page=${page}&limit=${limit}`;
 
-  const {
-    data: images,
-    pending,
-    error,
-  } = useFetch(url, { options: {} }, [url]);
+  const { data: images, pending, error } = useFetch(url, {});
 
   function handlePrevious() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);

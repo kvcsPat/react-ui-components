@@ -40,6 +40,9 @@ export default function Home() {
         <NavLink to="/search-autocomplete" className="component-card">
           &lt;SearchAutoComplete/&gt;
         </NavLink>
+        <NavLink to="/multi-filter" className="component-card">
+          &lt;MultiFilter/&gt;
+        </NavLink>
       </div>
     </Layout>
   );

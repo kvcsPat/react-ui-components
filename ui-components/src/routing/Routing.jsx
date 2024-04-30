@@ -11,6 +11,7 @@ import ModalParent from "../components/modal-popup/ModalParent";
 import ClickOutside from "../components/click-outside/ClickOutside";
 import ScrollToBottom from "../components/scroll-to-top-bottom/ScrollToBottom";
 import SearchAutoComplete from "../components/search-autocomplete/SearchAutoComplete";
+import MultiFilter from "../components/multi-filter/MultiFilter";
 
 export default function Routing() {
   return (
@@ -53,6 +54,12 @@ export default function Routing() {
           path="/search-autocomplete"
           element={
             <SearchAutoComplete baseUrl={"https://dummyjson.com/users"} />
+          }
+        />
+        <Route
+          path="/multi-filter"
+          element={
+            <MultiFilter baseUrl={"https://dummyjson.com/products?limit=100"} />
           }
         />
       </Routes>

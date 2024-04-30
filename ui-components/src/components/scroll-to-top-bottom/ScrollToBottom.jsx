@@ -7,7 +7,7 @@ import FetchedData from "../re-used/fetched-data/FetchedData";
 
 export default function ScrollToBottom({ baseUrl }) {
   const [products, setProducts] = useState([]);
-  const { data, pending, error } = useFetch(baseUrl, { options: {} });
+  const { data, pending, error } = useFetch(baseUrl, {});
 
   const bottomRef = useRef(null);
 
