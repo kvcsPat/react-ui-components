@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOutsideClick from "../../hooks/useClickOutside";
 import "./Suggestions.css";
 
-export default function Suggestions({ data, handleClick }) {
+export default function Suggestions({ data, handleClick, setShowDropDown }) {
+  const ref = useRef();
+
+  useOutsideClick(ref, () => setShowDropDown(false));
+
   return (
-    <ul className="suggestions">
+    <ul ref={ref} className="suggestions">
       {data && data.length ? (
         data.map((item, index) => (
           <li key={index} className="suggestion-item" onClick={handleClick}>

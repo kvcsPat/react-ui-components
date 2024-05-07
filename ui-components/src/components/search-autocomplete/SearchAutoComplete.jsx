@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../routing/Layout";
 import NavToHome from "../structure/nav-to-home/NavToHome";
 import FetchedData from "../re-used/fetched-data/FetchedData";
+import Suggestions from "./Suggestions";
 import useFetch from "../../hooks/useFetch";
 import "./SearchAutoComplete.css";
-import Suggestions from "./Suggestions";
 
 export default function SearchAutoComplete({ baseUrl }) {
   const [users, setUsers] = useState([]);
@@ -84,7 +84,11 @@ export default function SearchAutoComplete({ baseUrl }) {
             </span>
           ) : null}
           {showDropDown && (
-            <Suggestions data={suggestions} handleClick={handleSearch} />
+            <Suggestions
+              data={suggestions}
+              handleClick={handleSearch}
+              setShowDropDown={setShowDropDown}
+            />
           )}
         </div>
         {users && users.length ? <FetchedData data={users} /> : null}
