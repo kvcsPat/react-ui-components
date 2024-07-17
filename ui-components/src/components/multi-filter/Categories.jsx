@@ -31,11 +31,11 @@ export default function Categories({
               <li
                 key={index}
                 className={`category-item ${
-                  selectedFilters?.includes(category) ? "item-active" : ""
+                  selectedFilters?.includes(category.slug) ? "item-active" : ""
                 }`}
-                onClick={() => handleClick(category)}
+                onClick={() => handleClick(category.slug)}
               >
-                {category}
+                {category.slug}
               </li>
             ))
           : null}
