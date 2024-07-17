@@ -36,7 +36,7 @@ export default function Routing() {
           path="/scroll-indicator"
           element={
             <ScrollIndicator
-              baseUrl={"https://dummyjson.com/products?limit=100"}
+              baseUrl={"https://dummyjson.com/products?limit=194"}
             />
           }
         />
@@ -47,7 +47,7 @@ export default function Routing() {
           path="/scroll-to-bottom"
           element={
             <ScrollToBottom
-              baseUrl={"https://dummyjson.com/products?limit=100"}
+              baseUrl={"https://dummyjson.com/products?limit=194"}
             />
           }
         />
@@ -60,7 +60,7 @@ export default function Routing() {
         <Route
           path="/multi-filter"
           element={
-            <MultiFilter baseUrl={"https://dummyjson.com/products?limit=100"} />
+            <MultiFilter baseUrl={"https://dummyjson.com/products?limit=194"} />
           }
         />
         <Route path="/scroll-to-section" element={<ScrollToSection />} />
