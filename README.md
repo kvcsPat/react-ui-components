@@ -6,7 +6,7 @@ The goal of this project was to practice ReactJS by creating a collection of reu
 
 ## Technologies
 
-The home page is using react-router-dom, the ui elements are created with reactJS only.
+The home page is using react-router-dom, the ui elements are created with ReactJS only.
 
 - react-js
 - react-router-dom
